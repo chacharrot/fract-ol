@@ -29,7 +29,7 @@ void	print_msg(int i)
 	}
 	else if (i == CONTROLS)
 	{
-		printf("\n\t\t" "Controls\n\n"	);
+		printf("\n\t\t" "Controls\n\n");
 		printf("\tMove" "\t\tUp/Down/Left/Right\n");
 		printf("\tZoom" "\t\tZ/X, Mouse wheel\n");
 		printf("\tFix julia" "\tF\n");

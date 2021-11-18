@@ -9,22 +9,37 @@
 # include <stdbool.h>
 # include <math.h>
 
-# define KB_ESC			65307
-# define KB_X			120
-# define KB_Z			122
-# define KB_UP			65362
-# define KB_DOWN		65364
-# define KB_LEFT		65361
-# define KB_RIGHT		65363
-# define KB_I			105
-# define KB_U			117
-# define KB_F			102
-# define KB_C			99
-# define MWHEELUP		4
-# define MWHEELDN		5
-
-# define WIDTH			900
-# define HEIGHT			600
+# ifdef __linux__
+#  define KB_ESC		65307
+#  define KB_X			120
+#  define KB_Z			122
+#  define KB_UP			65362
+#  define KB_DOWN		65364
+#  define KB_LEFT		65361
+#  define KB_RIGHT		65363
+#  define KB_I			105
+#  define KB_U			117
+#  define KB_F			102
+#  define KB_C			99
+#  define MWHEELUP		4
+#  define MWHEELDN		5
+# else
+#  define KB_ESC		53
+#  define KB_X			7
+#  define KB_Z			6
+#  define KB_UP			126
+#  define KB_DOWN		125
+#  define KB_LEFT		123
+#  define KB_RIGHT		124
+#  define KB_I			34
+#  define KB_U			32
+#  define KB_F			3
+#  define KB_C			8
+#  define MWHEELUP		4
+#  define MWHEELDN		5
+# endif
+#  define WIDTH			900
+#  define HEIGHT		600
 
 # define JULIA			1
 # define MANDELBROT		2
