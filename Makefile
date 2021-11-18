@@ -41,7 +41,7 @@ all			:	$(NAME)
 bonus		:	bonus_part
 
 .c.o		:
-		echo -n "\tCompiling $<\n"
+		echo "\tCompiling $<"
 		$(CC) -c $< -o $(<:.c=.o)
 
 mandatory	: $(OBJS)
