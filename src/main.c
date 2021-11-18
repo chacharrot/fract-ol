@@ -14,7 +14,7 @@ static int	check_arg(char *av, t_fractol *fr)
 	return (0);
 }
 
-static void			set_fr(t_fractol *fr)
+static void	set_fr(t_fractol *fr)
 {
 	fr->zoom = HEIGHT / 2;
 	fr->re_end = -3;
@@ -27,16 +27,18 @@ static void			set_fr(t_fractol *fr)
 	fr->c.im = 0;
 }
 
-static t_fractol	*fractol_set()
+static t_fractol	*fractol_set(void)
 {
 	t_fractol	*fr;
+
 	fr = (t_fractol *)malloc(sizeof(*fr));
 	if (!fr)
 		exit_str("malloc error");
 	fr->mlx = mlx_init();
 	fr->window = mlx_new_window(fr->mlx, WIDTH, HEIGHT, "fractol");
 	fr->image = mlx_new_image(fr->mlx, WIDTH, HEIGHT);
-	fr->addr = mlx_get_data_addr(fr->image, &(fr->bpp), &(fr->size_line), &(fr->endian));
+	fr->addr = mlx_get_data_addr(fr->image, &(fr->bpp),
+								&(fr->size_line), &(fr->endian));
 	if (!fr->mlx || !(fr->window) || !(fr->image) || !fr->addr)
 		exit_str("mlx error");
 	set_fr(fr);
