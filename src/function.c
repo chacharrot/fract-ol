@@ -31,9 +31,9 @@ void	print_msg(int i)
 	{
 		printf("\n\t\t" "Controls\n\n");
 		printf("\tMove" "\t\tUp/Down/Left/Right\n");
-		printf("\tZoom" "\t\tZ/X, Mouse wheel\n");
-		printf("\tFix julia" "\tF\n");
-		printf("\tColor shift" "\tC\n");
-		printf("\tModify iters" "\tI/U\n");
+		printf("\tZoom" "\t\tZ/X, Mouse wheel macos : 2 / 1\n");
+		printf("\tFix julia\tF macos : 5\n");
+		printf("\tColor shift\tC macos : 6\n");
+		printf("\tModify iters\tI/U macos : 3 / 4\n");
 	}
 }
