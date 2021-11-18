@@ -1,4 +1,5 @@
 NAME		=	fractol
+OS			= $(shell uname)
 
 FILES_C		=	\
 				draw.c \
@@ -25,7 +26,11 @@ OBJS_B		=	$(SRCS_B:.c=.o)
 CC			=	gcc
 C_FLG		=	-Wall -Wextra -Werror
 
-MLX_FLG		=	-Lminilibx-linux -lmlx -lXext -lX11 -lm -lbsd
+ifeq ($(OS), Linux)
+	MLX_FLG		=	-Lminilibx-linux -lmlx -lXext -lX11 -lm -lbsd
+else
+	MLX_FLG	= -Lminilibx_opengl_20191021 -l mlx -framework OpenGL -framework AppKit
+endif
 
 .SILENT		:
 

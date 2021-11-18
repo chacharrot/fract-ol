@@ -50,15 +50,15 @@ int	main(int argc, char **argv)
 	t_fractol	*fr;
 
 	if (argc != 2)
-		exit_str(USG_ERR);
+		print_msg(USG_ERR);
 	fr = fractol_set();
 	if (!fr)
 		exit_str("init error");
 	if (argc == 2)
 	{
 		if (check_arg(argv[1], fr))
-			exit_str(USG_ERR);
-		printf("%s", CONTROLS);
+			print_msg(USG_ERR);
+		print_msg(CONTROLS);
 		draw(fr);
 		mlx_hook(fr->window, 2, 5, key_handler, fr);
 		mlx_hook(fr->window, 4, (1L << 2), mouse_wheel, fr);
