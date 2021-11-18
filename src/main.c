@@ -38,7 +38,7 @@ static t_fractol	*fractol_set(void)
 	fr->window = mlx_new_window(fr->mlx, WIDTH, HEIGHT, "fractol");
 	fr->image = mlx_new_image(fr->mlx, WIDTH, HEIGHT);
 	fr->addr = mlx_get_data_addr(fr->image, &(fr->bpp),
-								&(fr->size_line), &(fr->endian));
+	&(fr->size_line), &(fr->endian));
 	if (!fr->mlx || !(fr->window) || !(fr->image) || !fr->addr)
 		exit_str("mlx error");
 	set_fr(fr);
@@ -47,7 +47,7 @@ static t_fractol	*fractol_set(void)
 
 int	main(int argc, char **argv)
 {
-	t_fractol *fr;
+	t_fractol	*fr;
 
 	if (argc != 2)
 		exit_str(USG_ERR);
