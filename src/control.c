@@ -1,5 +1,4 @@
-
-#include "fract-ol.h"
+#include "fractol.h"
 
 static void	zoom(t_fractol *fr, int key)
 {
@@ -28,7 +27,7 @@ static void	zoom(t_fractol *fr, int key)
 	fr->im_end = corr.im - ((HEIGHT - (float)fr->mpos.im) / HEIGHT) * d;
 }
 
-int			mouse_wheel(int key, int mx, int my, t_fractol *fr)
+int	mouse_wheel(int key, int mx, int my, t_fractol *fr)
 {
 	if (key == MWHEELUP || key == MWHEELDN)
 	{
@@ -40,7 +39,7 @@ int			mouse_wheel(int key, int mx, int my, t_fractol *fr)
 	return (0);
 }
 
-int			mouse_move(int mx, int my, t_fractol *fr)
+int	mouse_move(int mx, int my, t_fractol *fr)
 {
 	if (fr->type == JULIA && fr->julia_fix)
 	{
@@ -65,14 +64,14 @@ static void	move(t_fractol *fr, int key)
 		fr->im_end += fr->move;
 }
 
-int			key_handler(int key, t_fractol *fr)
+int	key_handler(int key, t_fractol *fr)
 {
 	if (key == KB_ESC)
 		exit_str("esc");
 	else if (key == KB_X || key == KB_Z)
 		zoom(fr, key);
-	else if (key == KB_RIGHT || key == KB_DOWN ||
-		key == KB_LEFT || key == KB_UP)
+	else if (key == KB_RIGHT || key == KB_DOWN
+		||key == KB_LEFT || key == KB_UP)
 		move(fr, key);
 	else if (key == KB_I && (1.05 * fr->iter) < MAX_ITER)
 		fr->iter *= 1.05;

@@ -1,4 +1,4 @@
-#include "fract-ol.h"
+#include "fractol.h"
 
 int	iter_julia(t_complex a, t_fractol *fr)
 {
@@ -8,10 +8,10 @@ int	iter_julia(t_complex a, t_fractol *fr)
 	i = 0;
 	while (a.re * a.re + a.im * a.im <= 4 && i < fr->iter)
 	{
-    	tmp = a.re * a.re - a.im * a.im + (fr->c.re);
-    	a.im = 2 * (a.re * a.im) + (fr->c.im);
+		tmp = a.re * a.re - a.im * a.im + (fr->c.re);
+		a.im = 2 * (a.re * a.im) + (fr->c.im);
 		a.re = tmp;
-    	i++;
+		i++;
 	}
 	return (i);
 }
@@ -27,10 +27,10 @@ int	iter_mandel(t_complex a, t_fractol *fr)
 	i = 0;
 	while (tmp2.re * tmp2.re + tmp2.im * tmp2.im <= 4 && i < fr->iter)
 	{
-    	tmp = tmp2.re * tmp2.re - tmp2.im * tmp2.im + (a.re);
+		tmp = tmp2.re * tmp2.re - tmp2.im * tmp2.im + (a.re);
 		tmp2.im = 2 * (tmp2.re * tmp2.im) + (a.im);
 		tmp2.re = tmp;
-    	i++;
+		i++;
 	}
 	return (i);
 }

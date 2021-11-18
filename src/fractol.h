@@ -1,4 +1,3 @@
-
 #ifndef FRACTOL_H
 
 # define FRACTOL_H
@@ -17,13 +16,8 @@
 #  define KB_DOWN		65364
 #  define KB_LEFT		65361
 #  define KB_RIGHT		65363
-#  define KP_ADD		65451
-#  define KP_SUBTRACT	65453
 #  define KB_I			105
 #  define KB_U			117
-#  define KB_R			114
-#  define KP_4			65430
-#  define KP_2			65433
 #  define KB_F			102
 #  define KB_C			99
 #  define MWHEELUP		4
@@ -100,6 +94,5 @@ int			ft_strcmp(char *s1, const char *s2);
 int			mouse_move(int mx, int my, t_fractol *fr);
 int			mouse_wheel(int key, int mx, int my, t_fractol *fr);
 int			key_handler(int key, t_fractol *fr);
-
 
 #endif

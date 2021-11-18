@@ -1,4 +1,4 @@
-#include "fract-ol.h"
+#include "fractol.h"
 
 static int	check_arg(char *av, t_fractol *fr)
 {
@@ -38,7 +38,7 @@ static t_fractol	*fractol_set(void)
 	fr->window = mlx_new_window(fr->mlx, WIDTH, HEIGHT, "fractol");
 	fr->image = mlx_new_image(fr->mlx, WIDTH, HEIGHT);
 	fr->addr = mlx_get_data_addr(fr->image, &(fr->bpp),
-	&(fr->size_line), &(fr->endian));
+			&(fr->size_line), &(fr->endian));
 	if (!fr->mlx || !(fr->window) || !(fr->image) || !fr->addr)
 		exit_str("mlx error");
 	set_fr(fr);
