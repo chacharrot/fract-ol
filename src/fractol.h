@@ -38,8 +38,8 @@
 #  define MWHEELUP		4
 #  define MWHEELDN		5
 # endif
-#  define WIDTH			900
-#  define HEIGHT		600
+# define WIDTH			900
+# define HEIGHT			600
 
 # define JULIA			1
 # define MANDELBROT		2
