@@ -82,7 +82,5 @@ int	key_handler(int key, t_fractol *fr)
 	else if (key == KB_C)
 		fr->color_shift += 1;
 	draw(fr);
-	if (key)
-		printf("%d\n", key);
 	return (0);
 }
