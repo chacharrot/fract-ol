@@ -66,7 +66,7 @@ static void	move(t_fractol *fr, int key)
 
 int	key_handler(int key, t_fractol *fr)
 {
-	/*if (key == KB_ESC)
+	if (key == KB_ESC)
 		exit_str("esc");
 	else if (key == KB_X || key == KB_Z)
 		zoom(fr, key);
@@ -81,7 +81,7 @@ int	key_handler(int key, t_fractol *fr)
 		fr->julia_fix = !fr->julia_fix;
 	else if (key == KB_C)
 		fr->color_shift += 1;
-	draw(fr);*/
+	draw(fr);
 	if (key)
 		printf("%d\n", key);
 	return (0);
